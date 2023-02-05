@@ -1,8 +1,35 @@
-let wordsArray = ["яблоко", "мёд"]
+let wordsArray = [
+    "человек",
+    "время",
+    "сторона",
+    "земля",
+    "конец",
+    "женщина",
+    "случай",
+    "начало",
+    "вопрос",
+    "деньги",
+    "минута",
+    "товарищ",
+    "дорога",
+    "мужчина",
+    "движение",
+    "помощь",
+    "возможность",
+    "состояние",
+    "действие",
+    "причина",
+    "государство",
+    "положение",
+    "профессор",
+    "директор",
+    "условие",
+    "бутылка",
+    "процесс",
+    "будущее",
+]
 let randomNumber = Math.round(Math.random() * (wordsArray.length - 1))
 let randomWord = wordsArray[randomNumber].toUpperCase();
-
-
 let imageEl = document.querySelector(".game__image-item");
 let testEl = document.querySelector(".test");
 let wordEl = document.querySelector(".game__word");
