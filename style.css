@@ -1,0 +1,135 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game__title {
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+}
+
+@media (max-width:530px) {
+    .content {
+        margin: 0 15px;
+    }
+    .game__title {
+        font-size: 5px;
+    }
+}
+
+.game__image {}
+
+.game__word {
+    display: flex;
+    margin: 40px 0;
+}
+
+@media (max-width:530px) {
+    .game__word {
+        display: flex;
+        margin: 5px 0;
+    }
+}
+
+.game__word-letter {
+    font-size: 40px;
+    margin: 0 10px;
+}
+
+@media (max-width:530px) {
+    .game__word-letter {
+        font-size: 35px;
+        margin: 0 5px;
+    }
+}
+
+@media (max-width:530px) {
+    .game__title {
+        font-size: 25px;
+        margin: 0 5px;
+    }
+}
+
+.game__letters {
+    display: flex;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width:530px) {
+    .game__letters {
+        display: flex;
+        margin: 10px 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .game__letters::after {
+        content: "";
+        flex: auto;
+    }
+}
+
+.game__letters-letter {
+    font-size: 42px;
+    margin: 0 10px;
+}
+
+@media (max-width:530px) {
+    .game__letters-letter {
+        font-size: 32px;
+        margin: 10px 10px;
+    }
+}
+
+.game__letters-letter:hover {
+    font-size: 40px;
+}
+
+@media (max-width:530px) {
+    .game__letters-letter:hover {
+        font-size: 30px;
+    }
+}
+
+.hover {
+    cursor: pointer;
+}
+
+.letter-yes {
+    background: url('images/yes.svg') center center no-repeat;
+}
+
+.letter-no {
+    background: url('images/no.svg') center center no-repeat;
+}
+
+.game__over {
+    display: none;
+    font-size: 42px;
+    font-weight: 500;
+    color: red;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.game__win {
+    display: none;
+    font-size: 42px;
+    font-weight: 500;
+    color: green;
+    text-align: center;
+    margin: 10px 0;
+}
