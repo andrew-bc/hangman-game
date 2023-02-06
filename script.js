@@ -28,7 +28,7 @@ let wordsArray = [
     "процесс",
     "будущее",
 ]
-let randomNumber = Math.round(Math.random() * (wordsArray.length - 1))
+let randomNumber = Math.floor(Math.random() * wordsArray.length)
 let randomWord = wordsArray[randomNumber].toUpperCase();
 let imageEl = document.querySelector(".game__image-item");
 let testEl = document.querySelector(".test");
@@ -70,18 +70,14 @@ let renderUserLetter = (e, userAnswer) => {
         e.target.classList.add("letter-yes");
     } else {
         e.target.classList.add("letter-no");
-
     };
     e.target.classList.remove("hover");
 
 }
 
 let renderImage = () => {
-    //imageEl
-    if (attempt < 6) {
-        imageEl.src = `images/Hangman-${attempt}.png`;
-    } else {
-        imageEl.src = `images/Hangman-${attempt}.png`;
+    imageEl.src = `images/Hangman-${attempt}.png`;
+    if (attempt == 6) {
         renderStopGame();
     }
 }
@@ -104,7 +100,6 @@ let renderWinGame = () => {
     lettersEl.forEach(item => {
         item.removeEventListener("click", letterClickHandler)
     })
-
 }
 
 let letterClickHandler = (e) => {
@@ -119,12 +114,9 @@ let letterClickHandler = (e) => {
     e.target.removeEventListener("click", letterClickHandler);
 }
 
-
 lettersEl.forEach(item => {
     item.addEventListener("click", letterClickHandler)
 })
-
-
 
 console.log(randomWord);
 
